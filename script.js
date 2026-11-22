@@ -58,7 +58,7 @@ const CONFIG = {
     /* ---------------- PHOTOS 5-8 ---------------- */
     { type: "photo", src: "photos/05.jpg", caption: "Soft and sleepy", note: "That moment when we were together sitting in the backseat of the car, sharing a quiet drive across Delhi, with the city lights flickering outside while we talked about the sweetest things", focus: "center 35%" },
     { type: "photo", src: "photos/06.jpg", caption: "Cheek kisses", note: "The gentle way you pull and kiss my cheeks, making me feel so loved and protected", focus: "center 35%" },
-    { type: "photo", src: "photos/07.jpg", caption: "Bows and giggles", note: "The way you make the most unfunny jokes, even then I laugh (your'e welcome), and yet that makes me think how lucky I amto have you in my life", focus: "center 40%" },
+    { type: "photo", src: "photos/07.jpg", caption: "Bows and giggles", note: "The way you make the most unfunny jokes, even then I laugh (your'e welcome), and yet that makes me think how lucky I am to have you in my life", focus: "center 40%" },
     { type: "photo", src: "photos/08.jpg", caption: "Night out", note: "The iconic hard launch moment when we posted this pic and marked it as the beginning of our journey", focus: "center 45%" },
 
     {
