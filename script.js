@@ -313,9 +313,23 @@ const CONFIG = {
         else { bgm.pause(); btn.classList.add("off"); }
       });
     }
-    bgm.play().catch(function () {});
+    var p = bgm.play();
+    if (p && p.catch) {
+      p.catch(function () {
+        btn.classList.add("off");
+        var kick = function (e) {
+          if (e.target.closest && e.target.closest("#musicBtn")) { return; }
+          document.removeEventListener("pointerdown", kick);
+          document.removeEventListener("keydown", kick);
+          if (bgm.paused && btn.classList.contains("off")) {
+            bgm.play().then(function () { btn.classList.remove("off"); }).catch(function () {});
+          }
+        };
+        document.addEventListener("pointerdown", kick);
+        document.addEventListener("keydown", kick);
+      });
+    }
   }
-
   /* ---------- gate ---------- */
   function norm(s) { return String(s).toLowerCase().replace(/[^a-z0-9]/g, ""); }
   function isUnlocked() { try { return sessionStorage.getItem("mb_ok") === "1"; } catch (e) { return false; } }
